@@ -1,21 +1,21 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def main():
-    return 'здесь будет главная'
+    return render_template('index.html')
 
 
 @app.route('/departures/<departure>/')
 def render_departures(departure):
-    return 'здесь будет направление'
+    return render_template('departure.html')
 
 
 @app.route('/tour/<id>/')
 def render_tour(id):
-    return 'здесь будет тур'
+    return render_template('tour.html')
 
 
 app.run()

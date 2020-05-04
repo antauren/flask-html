@@ -13,7 +13,7 @@ def render_departures(departure):
     return render_template('departure.html')
 
 
-@app.route('/tour/<id>/')
+@app.route('/tours/<id>/')
 def render_tour(id):
     return render_template('tour.html')
 

@@ -19,6 +19,7 @@ def render_departures(departure):
     request_tours = [tour for tour in tours_dict.values() if tour['departure'] == departure]
 
     return render_template('departure.html',
+
                            tours=request_tours,
                            departures=departures,
                            departure=departures[departure],
@@ -28,9 +29,12 @@ def render_departures(departure):
                            )
 
 
-@app.route('/tours/<id>/')
+@app.route('/tours/<int:id>/')
 def render_tour(id):
-    return render_template('tour.html')
+    return render_template('tour.html',
+
+                           tour=tours_dict[id],
+                           departures=departures)
 
 
 app.run(debug=True)

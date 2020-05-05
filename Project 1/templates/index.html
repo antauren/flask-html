@@ -53,8 +53,8 @@
           </div>
           <div class="card-body">
             <h2 class="h5 card-title">{{ tour.title }}</h2>
-            <p class="card-text">{{ tour.description[:100] }} </p>
-            <a href="/tours/{{ loop.index }}/" class="btn btn-sm btn-primary">{{ tour.country }} {{ tour.price }} {{ tour.stars }}*</a>
+            <p class="card-text">{{ tour.description[:100] }}</p>
+            <a href="/tours/{{ tour.id }}/" class="btn btn-sm btn-primary">{{ tour.country }} {{ tour.price }} {{ tour.stars }}*</a>
           </div>
         </div>
       </div>
